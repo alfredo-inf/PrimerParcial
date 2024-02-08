@@ -1,9 +1,7 @@
 import java.util.Scanner;
-
-public class empresxyz {
-
-
+public class calculo_de_cuota {
     public static void main(String[] args) {
+
         final double TASA = 0.2135;
         Scanner escaner = new Scanner(System.in);
         //Pantalla de inicio
@@ -34,10 +32,15 @@ public class empresxyz {
         double pagoMensual = Capital * (TASA * factor)/(factor2);
 
         //Impresion en pantalla
+        System.out.println("----------------------------");
         System.out.println("Bienvenido "+nombre_apellido);
+        System.out.println("----------------------------");
         System.out.println("El monto de su prestamo es $"+Capital);
-        System.out.println("Cuotas a pagar: "+cuotas+ " meses");
-        System.out.println("Su pago mensual seria $"+pagoMensual);
+        System.out.println("----------------------------");
+        System.out.println("Cuotas a pagar: "+cuotas+ " cuotas");
+        System.out.println("----------------------------");
+        System.out.println("Su pago mensual seria $"+Math.round(pagoMensual));
+        System.out.println("----------------------------");
 
     }
 }
